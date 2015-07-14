@@ -105,8 +105,8 @@ angular.module('slick', [])
             useCSS: scope.useCSS isnt "false"
             variableWidth: scope.variableWidth is "true"
             vertical: scope.vertical is "true"
-            prevArrow: if scope.prevArrow then $(scope.prevArrow) else undefined
-            nextArrow: if scope.nextArrow then $(scope.nextArrow) else undefined
+            prevArrow: if scope.prevArrow then $(scope.prevArrow).prop('outerHTML') else undefined
+            nextArrow: if scope.nextArrow then $(scope.nextArrow).prop('outerHTML') else undefined
 
 
           slider.on 'init', (sl) ->
